@@ -1,0 +1,182 @@
+{
+  "project": "Vault Productions Website",
+  "lastUpdated": "2026-06-06",
+  "publicRoot": "public",
+  "directories": {
+    "logo": {
+      "path": "public/logo",
+      "purpose": "Brand marks, game key art, mobile game art, SayHelloAI industry posters",
+      "files": [
+        {
+          "path": "public/logo/vault logo.png",
+          "type": "image",
+          "usage": ["Header logo", "Footer logo"],
+          "notes": "Official flat Vault Productions logo"
+        },
+        {
+          "path": "public/logo/vault logo 3d.png",
+          "type": "image",
+          "usage": ["Final CTA wolf visual"],
+          "notes": "Large cybernetic wolf image used for mouse-follow interaction"
+        },
+        {
+          "path": "public/logo/dark arrival logo.jpg",
+          "type": "image",
+          "usage": ["Best of 2 Worlds PC game card"],
+          "linksTo": "https://store.steampowered.com/app/3295930/THE_DARK_ARRIVAL__SHADOWS_OF_THE_PAST/"
+        },
+        {
+          "path": "public/logo/mobile games logo.png",
+          "type": "image",
+          "usage": ["Best of 2 Worlds mobile game card"],
+          "linksTo": "https://play.google.com/store/apps/dev?id=8740967393782923454&hl=en_US"
+        },
+        {
+          "path": "public/logo/Health & Wellness.png",
+          "type": "image",
+          "usage": ["SayHelloAI industry marquee"]
+        },
+        {
+          "path": "public/logo/SH_Gaming & Esports.png",
+          "type": "image",
+          "usage": ["SayHelloAI industry marquee"]
+        },
+        {
+          "path": "public/logo/SH_Real Estate.png",
+          "type": "image",
+          "usage": ["SayHelloAI industry marquee"]
+        },
+        {
+          "path": "public/logo/SH_Entertainment & Media.png",
+          "type": "image",
+          "usage": ["SayHelloAI industry marquee"]
+        },
+        {
+          "path": "public/logo/SH_Beauty & Fashion.png",
+          "type": "image",
+          "usage": ["SayHelloAI industry marquee"]
+        },
+        {
+          "path": "public/logo/SH_Restaurants.png",
+          "type": "image",
+          "usage": ["SayHelloAI industry marquee"]
+        },
+        {
+          "path": "public/logo/SH_hospitality.png",
+          "type": "image",
+          "usage": ["SayHelloAI industry marquee"]
+        }
+      ]
+    },
+    "images": {
+      "path": "public/images",
+      "purpose": "Service section artwork",
+      "files": [
+        {
+          "path": "public/images/mobile games.png",
+          "type": "image",
+          "usage": ["Services card", "Mobile/tablet service toggle"]
+        },
+        {
+          "path": "public/images/pc games.png",
+          "type": "image",
+          "usage": ["Services card", "Mobile/tablet service toggle"]
+        },
+        {
+          "path": "public/images/game prototypes.png",
+          "type": "image",
+          "usage": ["Services card", "Mobile/tablet service toggle"]
+        },
+        {
+          "path": "public/images/interactive experiences.png",
+          "type": "image",
+          "usage": ["Services card", "Mobile/tablet service toggle"]
+        },
+        {
+          "path": "public/images/ai development.png",
+          "type": "image",
+          "usage": ["Services card", "Mobile/tablet service toggle"]
+        },
+        {
+          "path": "public/images/cinematic trailers.png",
+          "type": "image",
+          "usage": ["Services card", "Mobile/tablet service toggle"]
+        }
+      ]
+    },
+    "videos": {
+      "path": "public/videos",
+      "purpose": "Hero scrub media, SayHelloAI local video previews, SayHelloAI motion study",
+      "files": [
+        {
+          "path": "public/videos/beat scroll.webp",
+          "type": "animated-webp",
+          "usage": ["Hero scroll-scrub canvas"],
+          "optimization": "Decoded through ImageDecoder when available and sampled to a maximum of 48 displayed frames"
+        },
+        {
+          "path": "public/videos/2ndsection-optimized.webp",
+          "type": "animated-webp",
+          "usage": ["SayHelloAI motion band"],
+          "optimization": "Lazy-loaded image with async decoding"
+        },
+        {
+          "path": "public/videos/SH FPV video.mp4",
+          "type": "video",
+          "usage": ["SayHelloAI local preview gallery", "SayHelloAI lightbox"],
+          "optimization": "Preview plays only while visible using IntersectionObserver"
+        },
+        {
+          "path": "public/videos/SH game video .mp4",
+          "type": "video",
+          "usage": ["SayHelloAI local preview gallery", "SayHelloAI lightbox"],
+          "optimization": "Preview plays only while visible using IntersectionObserver"
+        },
+        {
+          "path": "public/videos/SH demo video 2.mp4",
+          "type": "video",
+          "usage": ["SayHelloAI local preview gallery", "SayHelloAI lightbox"],
+          "optimization": "Preview plays only while visible using IntersectionObserver"
+        },
+        {
+          "path": "public/videos/SH video 4.mp4",
+          "type": "video",
+          "usage": ["SayHelloAI local preview gallery", "SayHelloAI lightbox"],
+          "optimization": "Preview plays only while visible using IntersectionObserver"
+        },
+        {
+          "path": "public/videos/ SH anime fight video .mp4",
+          "type": "video",
+          "usage": ["Unused"],
+          "notes": "Kept in public assets but intentionally not rendered in SayHelloAI"
+        }
+      ]
+    }
+  },
+  "externalVideoEmbeds": [
+    {
+      "provider": "YouTube",
+      "id": "c5W6ZKZ3a1E",
+      "usage": ["SayHelloAI main cinematic embed"],
+      "url": "https://youtu.be/c5W6ZKZ3a1E"
+    },
+    {
+      "provider": "YouTube",
+      "id": "zekmsiT-JCU",
+      "usage": ["SayHelloAI portfolio viewing embed"],
+      "url": "https://youtu.be/zekmsiT-JCU"
+    }
+  ],
+  "namingGuidelines": {
+    "recommended": "Use lowercase kebab-case for new files, for example sayhello-product-demo.mp4",
+    "currentNote": "Existing files preserve the uploaded names to avoid breaking references"
+  },
+  "replacementGuidelines": [
+    "Place brand and game logos in public/logo",
+    "Place service card artwork in public/images",
+    "Place hero, preview, and motion media in public/videos",
+    "Update src/data.tsx for service and game image references",
+    "Update src/components/SayHelloAI.tsx for local preview video references",
+    "Keep large videos compressed for web delivery before production deploy"
+  ]
+}
