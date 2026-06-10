@@ -8,7 +8,9 @@ export default defineConfig({
       input: {
         main: "./index.html",
         privacy: "./privacy-policy/index.html",
+        privacyClean: "./privacy-policy.html",
         terms: "./terms-of-service/index.html",
+        termsClean: "./terms-of-service.html",
       },
     },
   },
