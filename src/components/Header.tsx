@@ -56,10 +56,20 @@ export function Header() {
     };
   }, []);
 
+  const isHomepage = typeof window !== "undefined" && (window.location.pathname === "/" || window.location.pathname === "/index.html" || window.location.pathname === "");
+
+  const getHref = (href: string) => {
+    if (href.startsWith("#") && !isHomepage) {
+      return "/" + href;
+    }
+    return href;
+  };
+
   const handleHomeClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    window.history.pushState(null, "", "/");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (isHomepage) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
@@ -81,7 +91,7 @@ export function Header() {
               <HeaderNavItem
                 key={link.label}
                 label={link.label}
-                href={link.href}
+                href={getHref(link.href)}
                 active={activeSection === link.sectionId}
                 onClick={() => setActiveSection(link.sectionId)}
                 onHoverChange={setHoveredNav}
@@ -108,7 +118,7 @@ export function Header() {
           {headerLinks.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={getHref(link.href)}
               className={`site-mobile-link ${activeSection === link.sectionId ? "is-active" : ""}`}
               onClick={() => setActiveSection(link.sectionId)}
             >

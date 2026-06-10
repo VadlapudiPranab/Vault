@@ -10,6 +10,11 @@ const footerLinks = [
   { label: "Contact", href: contactHref }
 ];
 
+const legalLinks = [
+  { label: "Privacy Policy", href: "https://vaultgamesstudio.com/privacy-policy/" },
+  { label: "Terms of Service", href: "https://vaultgamesstudio.com/terms-of-service/" }
+];
+
 const socialLinks = [
   {
     label: "YouTube",
@@ -73,7 +78,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="border-t border-vault-line">
-      <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-12 sm:px-7 lg:grid-cols-[1.25fr_0.7fr_1.25fr_1fr] lg:px-10">
+      <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-12 sm:px-7 lg:grid-cols-[1.25fr_0.7fr_0.7fr_1.25fr_1fr] lg:px-10">
         <div>
           <div className="grid h-12 w-12 place-items-center border border-vault-line bg-white/[0.03] p-1">
             <img src="/logo/vault logo.png" alt="Vault Productions" className="brand-logo-image" />
@@ -91,6 +96,23 @@ export function Footer() {
           <div className="mt-4 flex flex-col gap-3">
             {footerLinks.map((link) => (
               <a key={link.label} href={link.href} className="text-sm text-white/50 transition hover:text-vault-cyan">
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-bold uppercase text-white">Legal</h3>
+          <div className="mt-4 flex flex-col gap-3">
+            {legalLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-white/50 transition hover:text-vault-cyan"
+              >
                 {link.label}
               </a>
             ))}
@@ -135,8 +157,24 @@ export function Footer() {
           </form>
         </div>
       </div>
-      <div className="border-t border-vault-line px-5 py-5 text-center text-xs uppercase text-white/30">
-        © 2026 Vault Productions. All worlds reserved.
+      <div className="border-t border-vault-line px-5 py-5 text-center text-xs uppercase text-white/30 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6">
+        <span>© 2026 Vault Productions. All worlds reserved.</span>
+        <a
+          href="https://vaultgamesstudio.com/privacy-policy/"
+          target="_blank"
+          rel="noreferrer"
+          className="transition hover:text-vault-cyan"
+        >
+          Privacy Policy
+        </a>
+        <a
+          href="https://vaultgamesstudio.com/terms-of-service/"
+          target="_blank"
+          rel="noreferrer"
+          className="transition hover:text-vault-cyan"
+        >
+          Terms of Service
+        </a>
       </div>
     </footer>
   );
