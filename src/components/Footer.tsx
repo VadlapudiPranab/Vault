@@ -11,8 +11,8 @@ const footerLinks = [
 ];
 
 const legalLinks = [
-  { label: "Privacy Policy", href: "https://vaultgamesstudio.com/privacy-policy/" },
-  { label: "Terms of Service", href: "https://vaultgamesstudio.com/terms-of-service/" }
+  { label: "Privacy Policy", href: "/privacy-policy/" },
+  { label: "Terms of Service", href: "/terms-of-service/" }
 ];
 
 const socialLinks = [
@@ -160,7 +160,7 @@ export function Footer() {
       <div className="border-t border-vault-line px-5 py-5 text-center text-xs uppercase text-white/30 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6">
         <span>© 2026 Vault Productions. All worlds reserved.</span>
         <a
-          href="https://vaultgamesstudio.com/privacy-policy/"
+          href="/privacy-policy/"
           target="_blank"
           rel="noreferrer"
           className="transition hover:text-vault-cyan"
@@ -168,7 +168,7 @@ export function Footer() {
           Privacy Policy
         </a>
         <a
-          href="https://vaultgamesstudio.com/terms-of-service/"
+          href="/terms-of-service/"
           target="_blank"
           rel="noreferrer"
           className="transition hover:text-vault-cyan"
