@@ -7,6 +7,9 @@ frontend:
     build:
       commands:
         - npm run build
+    postBuild:
+      commands:
+        - test "$(cat dist/app-ads.txt)" = "google.com, pub-2394269693347443, DIRECT, f08c47fec0942fa0"
   artifacts:
     baseDirectory: dist
     files:
